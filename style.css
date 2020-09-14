@@ -1,0 +1,15 @@
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.login-status {
+  font-size: large;
+}
+
+.bg-custom {
+  background-color: limegreen;
+} 
