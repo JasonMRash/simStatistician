@@ -4,42 +4,40 @@
     require 'dbh.inc.php';
 
     $setupName = $_POST['setupName'];
-    $userId = $_SESSION['userId'];
-    echo $gameName;
-    echo $userId;
-    if (empty($gameName)) {
-      header("Location: ../games.php?error=emptyfields");
+    $userId = (int)$_SESSION['userId'];
+    if (empty($setupName)) {
+      header("Location: ../setups.php?error=emptyfields");
       exit();
     }
     else {
 
-      $sql = "SELECT nameSetups FROM Setups WHERE nameSetups=?";
+      $sql = "SELECT nameSetups FROM Setups WHERE nameSetups=? & idUsers=?";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../games.php?error=sqlerror");
+        header("Location: ../setups.php?error=sqlerror");
         exit();
       }
       else {
-        mysqli_stmt_bind_param($stmt, "s", $gameName);
+        mysqli_stmt_bind_param($stmt, "si", $setupName, $userId);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
         if ($resultCheck > 0) {
-          header("Location: ../games.php?error=alreadyexists");
+          header("Location: ../setups.php?error=alreadyexists");
           exit();
         }
         else {
 
-          $sql = "INSERT INTO games (nameGames, idUsers) VALUES (?, ?)";
+          $sql = "INSERT INTO Setups (nameSetups, idUsers) VALUES (?, ?)";
           if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../games.php?error=sqlerror");
+            header("Location: ../setups.php?error=sqlerror");
             exit();
           }
           else {
             mysqli_stmt_bind_param($stmt, "ss", $gameName, $userId);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
-            header("Location: ../games.php?add=success");
+            header("Location: ../setups.php?add=success");
             exit();
           }
         }
@@ -49,5 +47,5 @@
     mysqli_close($conn);
   }
   else {
-    die("Location: ../games.php");
+    die("Location: ../setups.php");
   }

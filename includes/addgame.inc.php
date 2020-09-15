@@ -13,7 +13,7 @@
     }
     else {
 
-      $sql = "SELECT nameGames FROM games WHERE nameGames=?";
+      $sql = "SELECT nameGames FROM Games WHERE nameGames=?";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../games.php?error=sqlerror");
@@ -30,7 +30,7 @@
         }
         else {
 
-          $sql = "INSERT INTO games (nameGames, idUsers) VALUES (?, ?)";
+          $sql = "INSERT INTO Games (nameGames, idUsers) VALUES (?, ?)";
           if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../games.php?error=sqlerror");
             exit();

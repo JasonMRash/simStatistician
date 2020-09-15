@@ -49,10 +49,10 @@
             </div>';
 
             echo '<form class="form-games" action="includes/addgame.inc.php" method="post">
-              <div class="form-group text-center">
+              <div class="-sm text-center">
                 <input class="form-control" type="text" name="gameName" placeholder="Game Name">
               </div>
-              <div class="form-group text-center">
+              <div class=" text-center">
                 <button class="btn btn-dark" type="submit" name="games-submit">Add Game</button>
               </div>
             </form>

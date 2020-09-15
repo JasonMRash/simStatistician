@@ -11,7 +11,7 @@
 -- Table structure for table `Users`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `Users`;
 CREATE TABLE `Users` (
   `idUsers` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `uidUsers` varchar(255) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `Users` (
 --
 
 DROP TABLE IF EXISTS `Games`;
-CREATE TABLE `games` (
+CREATE TABLE `Games` (
   `idGames` int(11) AUTO_INCREMENT NOT NULL,
   `nameGames` varchar(255) NOT NULL,
   `idUsers` int(11) NOT NULL,

@@ -34,19 +34,19 @@
           }
         ?>
         <form class="form-signup" action="includes/signup.inc.php" method="post">
-          <div class="text-center form-group">
+          <div class="text-center ">
             <input class="form-control" type="text" name="uid" placeholder="Username">
           </div>
-          <div class="text-center form-group">
+          <div class="text-center ">
             <input class="form-control" type="text" name="mail" placeholder="E-mail">
           </div>
-          <div class="text-center form-group">
+          <div class="text-center ">
             <input class="form-control" type="password" name="pwd" placeholder="Password">
           </div>
-          <div class="text-center form-group">
+          <div class="text-center ">
             <input class="form-control" type="password" name="pwd-repeat" placeholder="Repeat password">
           </div>
-          <div class="text-center form-group">
+          <div class="text-center ">
             <button class="btn btn-dark" type="submit" name="signup-submit">Signup</button>
           </div>
         </form>

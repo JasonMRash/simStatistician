@@ -33,10 +33,10 @@
             require 'includes/dbh.inc.php';
             
             echo '<form class="form-games" action="includes/addgames.inc.php" method="post">
-            <div class="text-center form-group">
+            <div class="text-center ">
               <input class="form-control" type="text" name="gameName" placeholder="Game Name">
             </div>
-            <div class="text-center form-group">
+            <div class="text-center ">
               <button class="btn btn-dark" type="submit" name="games-submit">Add Game</button>
             </div>
             </form>
