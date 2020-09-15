@@ -31,10 +31,10 @@
               <a class="nav-link" href="games.php">Games</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Races</a>
+              <a class="nav-link" href="races.php">Races</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Tracks</a>
+              <a class="nav-link" href="setups.php">Setups</a>
               </li>';
             }
           ?>

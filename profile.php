@@ -9,31 +9,46 @@
           if (isset($_SESSION['userId'])) {
             echo '<h1>'.$_SESSION['userUid'].' Profile</h1>';
             require 'includes/dbh.inc.php';
-            $user = $_SESSION['userId'];
+            $user = (int)$_SESSION['userId'];
             // sql query to count current user total number of games
-            $sql ="SELECT COUNT FROM games WHERE user = ?";
+            $sql ="SELECT * FROM Games WHERE idUsers = ?";
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-              echo '<p>Error in query for number of games owned</p>';
+              echo '<p>Error in query for number of games owned</p>'.mysqli_error($conn);
               exit();
             }
             else {
-              mysqli_stmt_bind_param($stmt, "s", $user);
+              mysqli_stmt_bind_param($stmt, "i", $user);
               mysqli_stmt_execute($stmt);
               $result = mysqli_stmt_get_result($stmt);
-              echo '<p>Number of games: '.$result.'</p>';
+              $countRows = mysqli_num_rows($result);
+              echo '<p>Number of games: '.$countRows.'</p>';
             }
             // query to count current user total number of races  
-            $sql = "SELECT COUNT FROM races WHERE user = ?";
+            $sql = "SELECT * FROM Races WHERE idUsers = ?";
             if (!mysqli_stmt_prepare($stmt, $sql)) {
               echo '<p>Error in query for number of races</p>';
               exit();
             }
             else {
-              mysqli_stmt_bind_param($stmt, "s", $user);
+              mysqli_stmt_bind_param($stmt, "i", $user);
               mysqli_stmt_execute($stmt);
               $result = mysqli_stmt_get_result($stmt);
-              echo '<p>Number of races: '.$result.'</p>';
+              $countRows = mysqli_num_rows($result);
+              echo '<p>Number of races: '.$countRows.'</p>';
+            }
+            // query to count current user total number of setups  
+            $sql = "SELECT * FROM Setups WHERE idUsers = ?";
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+              echo '<p>Error in query for number of setups</p>';
+              exit();
+            }
+            else {
+              mysqli_stmt_bind_param($stmt, "i", $user);
+              mysqli_stmt_execute($stmt);
+              $result = mysqli_stmt_get_result($stmt);
+              $countRows = mysqli_num_rows($result);
+              echo '<p>Number of setups: '.$countRows.'</p>';
             }
           }
           else {
