@@ -7,7 +7,7 @@
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<h1>'.$_SESSION['userUid'].' Games</h1>';
+            echo '<h1 class="header-text">'.$_SESSION['userUid'].'\'s Games</h1>';
             if (isset($_GET['error'])) {
               if($_GET['error'] == "emptyfields") {
                 echo '<p class="error">Fill in all fields!</p>';
@@ -64,7 +64,7 @@
         ?>
     </div>
   </main>
-
+  
 <?php
   require "footer.php";
 ?>

@@ -11,5 +11,21 @@
 }
 
 .bg-custom {
-  background-color: limegreen;
-} 
+  background-color:#252523;
+}
+
+.wrapper-main {
+  min-height: 100vh;
+  background-color: silver;
+}
+
+.header-text {
+  font-size: 7.5vw;
+}
+.contact-text {
+  font-size: 5vw;
+}
+
+.footer-text {
+  color: white;
+}

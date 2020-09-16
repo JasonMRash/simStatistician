@@ -49,5 +49,6 @@
     mysqli_close($conn);
   }
   else {
-    die("Location: ../games.php");
+    header("Location: ../games.php");
+    exit();
   }

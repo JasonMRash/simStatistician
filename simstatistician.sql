@@ -78,6 +78,7 @@ DROP TABLE IF EXISTS `Races`;
 CREATE TABLE `Races` (
   `idRaces` int(11) NOT NULL AUTO_INCREMENT,
   `idUsers` int(11) NOT NULL,
+  `idGames` int(11) NOT NULL,
   `idSetups` int(11) NOT NULL,
   `date` date NOT NULL,
   `trackName` varchar(255) NOT NULL,
@@ -88,6 +89,7 @@ CREATE TABLE `Races` (
   `controllerType` varchar(255) NOT NULL,
   
   FOREIGN KEY (idUsers) REFERENCES Users (idUsers) ON DELETE CASCADE,
+  FOREIGN KEY (idGames) REFERENCES Games (idGames) ON DELETE CASCADE,
   FOREIGN KEY (idSetups) REFERENCES Setups (idSetups) ON DELETE NO ACTION,
   PRIMARY KEY (idRaces)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
