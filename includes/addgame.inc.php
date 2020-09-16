@@ -4,7 +4,7 @@
     require 'dbh.inc.php';
 
     $gameName = $_POST['gameName'];
-    $userId = $_SESSION['userId'];
+    $userId = (int)$_SESSION['userId'];
     echo $gameName;
     echo $userId;
     if (empty($gameName)) {
@@ -13,14 +13,14 @@
     }
     else {
 
-      $sql = "SELECT nameGames FROM Games WHERE nameGames=?";
+      $sql = "SELECT nameGames FROM Games WHERE idUsers=? AND nameGames=?";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../games.php?error=sqlerror");
         exit();
       }
       else {
-        mysqli_stmt_bind_param($stmt, "s", $gameName);
+        mysqli_stmt_bind_param($stmt, "is", $userId, $gameName);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
@@ -36,7 +36,7 @@
             exit();
           }
           else {
-            mysqli_stmt_bind_param($stmt, "ss", $gameName, $userId);
+            mysqli_stmt_bind_param($stmt, "si", $gameName, $userId);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
             header("Location: ../games.php?add=success");
