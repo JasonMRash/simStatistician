@@ -5,78 +5,38 @@
   <main>
     <div class="wrapper-main">
       <section class="container">
+        <div class="text-center">
+          <h1>View Setup</h1>
+        </div>
         <?php
-          // check if user is logged in
           if (isset($_SESSION['userId'])) {
-            echo '<h1>'.$_SESSION['userUid'].' Games</h1>';
-            if (isset($_GET['error'])) {
-              if($_GET['error'] == "emptyfields") {
-                echo '<p class="error">Fill in all fields!</p>';
+            if(isset($_GET['id'])){
+              require 'includes/dbh.inc.php';
+              $setupId = (int)$_GET['id'];
+              $sql = "SELECT * FROM Setups WHERE idSetups = ?";
+              $stmt = mysqli_stmt_init($conn);
+              if (!mysqli_stmt_prepare($stmt, $sql)) {
+                //header("Location: viewsetup.php?error=sqlerror");
+                exit();
               }
-              else if ($_GET['error'] == "alreadyexists") {
-                echo '<p class="error">Setup Name already exists!</p>';
-              }
-              else if ($_GET['error'] == "sqlerror") {
-                echo '<p class="error">SQL database Error!</p>';
-              }
-              
-            }
-            else if (isset($_GET['add'])) {
-              if ($_GET['add'] == "success") {
-                echo '<p class="success">Game added sucessfully!</p>';
-              }
-            }
-            else if (isset($_GET['delete'])) {
-              if ($_GET['delete'] == "success") {
-                echo '<p class="success">Game deleted sucessfully!</p>';
-              }
-            }
-            require 'includes/dbh.inc.php';
-            
-            echo '<div class="row justify-content-center">
-            <div class="col-auto">
-              <table class="table table-striped table-dark">
-                <thead>
-                  <th>Setup Name</th>
-                  <th>Game Name</th>
-                  <th>View</th>
-                  <th>Delete</th>
-                </thead>
-                <tbody>';
-            // show all user setups
-            require 'includes/viewallsetups.inc.php';
-
-            echo '</tbody>
-                </table>
-              </div>
-            </div>';
-            // add setup form
-            echo '<form class="form-setups" action="includes/addsetup.inc.php" method="post">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="form-group">
-                  <input class="form-control form-control-sm" type="text" title="Setup Name" name="setupName" placeholder="Setup Name">
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <div class="form-group">';
-            
-            require 'includes/gamenamedropdown.inc.php';
-
-            echo '</div>
-              </div>
-              <div class="row justify-content-center">
+  
+              mysqli_stmt_bind_param($stmt, "i", $setupId);
+              mysqli_stmt_execute($stmt);
+              $result = mysqli_stmt_get_result($stmt);
+              while($row = mysqli_fetch_assoc($result)) {
+                echo '<p class="text-center">Setup Name: '.$row['nameSetups'].'</p>
+                <div class="row justify-content-center">
                 <div class="col-lg">
                   <div class="text-center">
                     <strong class="justify-content-center">Aerodynamics</strong>
                   </div>
                   <div>
-                    <input class="form-control form-control-sm" type="number" min="1" max="11" title="Front Wing" name="frontWing" placeholder="Front Wing (1-11)">
-                    <input class="form-control form-control-sm" type="number" min="1" max="11" title="Rear Wing" name="rearWing" placeholder="Rear Wing (1-11)">
+                    <p>Front Wing: '.$row['frontWing'].'</p>
+                    <p>Rear Wing: '.$row['rearWing'].'</p>
                   </div>
                   <div class="text-center">
-                  <strong class="justify-content-center">Transmission</strong>
-                </div>
+                    <strong class="justify-content-center">Transmission</strong>
+                  </div>
                 <div>
                   <input class="form-control form-control-sm" type="number" min="50" max="100" title="On Throttle Differential" name="onThrottleDiff" placeholder="On Throttle Diff (50-100)">
                   <input class="form-control form-control-sm" type="number" min="50" max="100" title="Off Throttle Differential" name="offThrottleDiff" placeholder="Off Throttle Diff (50-100)">
@@ -124,17 +84,16 @@
                 </div>
               </div>
               </div>
-              <div class="text-center">
-                <button class="btn btn-dark" type="submit" name="setups-submit">Add Setup</button>
-              </div>
-            </div>
-            </form>
-            </section>';
+                <td><a class="btn btn-sm btn-danger" href="includes/deletegame.inc.php?id='.$row['idGames'].'">Delete</a></td>
+                </tr>';
+            }
+            }
           }
           else {
-            echo '<p">Log in to view your profile.</p>';
+            echo '<p class="login-status">You are logged out!</p>';
           }
         ?>
+      </section>
     </div>
   </main>
 
