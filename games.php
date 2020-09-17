@@ -7,7 +7,7 @@
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<h1 class="header-text">'.$_SESSION['userUid'].'\'s Games</h1>';
+            echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Games</h1></div>';
             if (isset($_GET['error'])) {
               if($_GET['error'] == "emptyfields") {
                 echo '<p class="error">Fill in all fields!</p>';

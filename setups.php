@@ -8,7 +8,7 @@
         <?php
           // check if user is logged in
           if (isset($_SESSION['userId'])) {
-            echo '<h1>'.$_SESSION['userUid'].' Games</h1>';
+            echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Setups</h1></div>';
             if (isset($_GET['error'])) {
               if($_GET['error'] == "emptyfields") {
                 echo '<p class="error">Fill in all fields!</p>';
@@ -23,12 +23,12 @@
             }
             else if (isset($_GET['add'])) {
               if ($_GET['add'] == "success") {
-                echo '<p class="success">Game added sucessfully!</p>';
+                echo '<p class="success">Setup added sucessfully!</p>';
               }
             }
             else if (isset($_GET['delete'])) {
               if ($_GET['delete'] == "success") {
-                echo '<p class="success">Game deleted sucessfully!</p>';
+                echo '<p class="success">Setup deleted sucessfully!</p>';
               }
             }
             require 'includes/dbh.inc.php';

@@ -7,7 +7,7 @@
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<h1>'.$_SESSION['userUid'].' Profile</h1>';
+            echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Profile</h1></div>';
             require 'includes/dbh.inc.php';
             $user = (int)$_SESSION['userId'];
             // sql query to count current user total number of games

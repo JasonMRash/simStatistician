@@ -7,7 +7,7 @@
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<h1 class="header-text">'.$_SESSION['userUid'].'\'s Races</h1>';
+            echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Races</h1></div>';
             if (isset($_GET['error'])) {
               if($_GET['error'] == "emptyfields") {
                 echo '<p class="error">Fill in all fields!</p>';
@@ -70,62 +70,57 @@
               </div>
               <div class="row justify-content-center">
                 <div class="col-lg">
+                  <div class="text-center">
+                    <strong>Race Date</strong>
+                  </div>
                   <div>
-                    <input class="form-control form-control-sm" type="number" min="1" max="11" title="Front Wing" name="frontWing" placeholder="Front Wing (1-11)">
-                    <input class="form-control form-control-sm" type="number" min="1" max="11" title="Rear Wing" name="rearWing" placeholder="Rear Wing (1-11)">
+                    <input class="form-control form-control-sm" type="date" title="Race Date" name="date">
                   </div>
                   <div class="text-center">
-                  <strong class="justify-content-center">Transmission</strong>
+                    <strong>Track Name</strong>
+                  </div>
+                  <div>
+                    <input class="form-control form-control-sm" type="text" title="Track Name" name="trackName" placeholder="Track Name">
+                  </div>
                 </div>
-                <div>
-                  <input class="form-control form-control-sm" type="number" min="50" max="100" title="On Throttle Differential" name="onThrottleDiff" placeholder="On Throttle Diff (50-100)">
-                  <input class="form-control form-control-sm" type="number" min="50" max="100" title="Off Throttle Differential" name="offThrottleDiff" placeholder="Off Throttle Diff (50-100)">
-                </div>
-                <div class="text-center">
-                  <strong class="justify-content-center">Suspension Geometry</strong>
-                </div>
-                <div>
-                  <input class="form-control form-control-sm" type="number" min="-3.50" max="-2.50" step="0.01" title="Front Camber" name="frontCamber" placeholder="Front Camber (-3.50 to -2.50)">
-                  <input class="form-control form-control-sm" type="number" min="-2.00" max="-1.00" step="0.01" title="Rear Camber" name="rearCamber" placeholder="Rear Camber (-2.00 to -1.00)">
-                  <input class="form-control form-control-sm" type="number" min="0.05" max="0.15" step="0.01" title="Front Toe" name="frontToe" placeholder="Front Toe (0.05 to 0.15)">
-                  <input class="form-control form-control-sm" type="number" min="0.20" max="0.50" step="0.01" title="Rear Toe" name="rearToe" placeholder="Rear Toe (0.20 to 0.50)">
-                </div>
+                <div class="col-lg">
+                  <div class="text-center">
+                    <strong>Fastest Lap</strong>
+                  </div>
+                  <div>
+                    <!-- Use a pattern to check if user entered correct time format --!>
+                    <input class="form-control form-control-sm" type="text" title="Fastest Lap" name="fastestLap" placeholder="Fastest Lap (59:59:999)">
+                  </div>
+                  <div class="text-center">
+                    <strong>Start Position</strong>
+                  </div>
+                  <div>
+                    <input class="form-control form-control-sm" type="number" min="1" max="22" title="Start Position" name="startPosition" placeholder="Start Position (1-22)">
+                  </div>
+                  <div class="text-center">
+                    <strong>Finish Position</strong>
+                  </div>
+                  <div>
+                    <input class="form-control form-control-sm" type="number" min="1" max="22" title="Finish Position" name="finishPosition" placeholder="Finish Position (1-22)">
+                  </div>
                 </div>
               <div class="col-lg">
-                
                 <div class="text-center">
-                  <strong class="justify-content-center">Suspension</strong>
+                  <strong>AI Difficulty</strong>
                 </div>
                 <div>
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Front Suspension" name="frontSuspension" placeholder="Front Suspension (1-11)">
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Rear Suspension" name="rearSuspension" placeholder="Rear Suspension (1-11)">
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Front Anti-Roll Bar" name="frontAntiRoll" placeholder="Front Anti-Roll Bar (1-11)">
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Rear Anti-Roll Bar" name="rearAntiRoll" placeholder="Rear Anti-Roll Bar (1-11)">
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Front Ride Height" name="frontRideHeight" placeholder="Front Ride Height (1-11)">
-                  <input class="form-control form-control-sm" type="number" min="1" max="11" title="Rear Ride Height" name="rearRideHeight" placeholder="Rear Ride Height (1-11)">
-                </div>
-              </div>
-              <div class="col-lg">
-                <div class="text-center">
-                  <strong class="justify-content-center">Brakes</strong>
-                </div>
-                <div class="">
-                  <input class="form-control form-control-sm" type="number" min="50" max="100" title="Brake Pressure" name="brakePressure" placeholder="Brake Pressure (50-100)">
-                  <input class="form-control form-control-sm" type="number" min="50" max="70" title="Front Brake Bias" name="frontBrakeBias" placeholder="Front Brake Bias (70-50)">
+                  <input class="form-control form-control-sm" type="number" min="1" max="110" title="AI Difficulty" name="aiDifficulty" placeholder="AI Difficulty (1-110)">
                 </div>
                 <div class="text-center">
-                  <strong class="justify-content-center">Tyres</strong>
+                  <strong>Controller Type</strong>
                 </div>
-                <div class="">
-                  <input class="form-control form-control-sm" type="number" min="21.0" max="25.0" step="0.1" title="Front Right Tyre Pressure" name="frontRightPressure" placeholder="Front Right Tyre Pressure (21.0 - 25.0)">
-                  <input class="form-control form-control-sm" type="number" min="21.0" max="25.0" step="0.1" title="Front Left Tyre Pressure" name="frontLeftPressure" placeholder="Front Left Tyre Pressure (21.0 - 25.0)">
-                  <input class="form-control form-control-sm" type="number" min="19.5" max="23.5" step="0.1" title="Rear Right Tyre Pressure" name="rearRightPressure" placeholder="Rear Right Tyre Pressure (19.5 - 23.5)">
-                  <input class="form-control form-control-sm" type="number" min="19.5" max="23.5" step="0.1" title="Rear Left Tyre Pressure" name="rearLeftPressure" placeholder="Rear Left Tyre Pressure (19.5 - 23.5)">
+                <div>
+                  <input class="form-control form-control-sm" type="text" title="Controller Type" name="controllerType" placeholder="Controller Type">
                 </div>
               </div>
               </div>
               <div class="text-center">
-                <button class="btn btn-dark" type="submit" name="setups-submit">Add Setup</button>
+                <button class="btn btn-dark" type="submit" name="races-submit">Add Race</button>
               </div>
             </div>
             </form>

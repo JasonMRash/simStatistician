@@ -29,7 +29,7 @@
         ?>
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<strong class="login-status">Welcome '.$_SESSION['userUid'].'!</strong>';
+            echo '<div class="text-center"><strong class="login-status header-text">Welcome '.$_SESSION['userUid'].'!</strong></div>';
           }
           else {
             echo '<p class="login-status">You are logged out!</p>';
