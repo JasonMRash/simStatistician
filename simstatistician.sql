@@ -82,7 +82,7 @@ CREATE TABLE `Races` (
   `idSetups` int(11) NOT NULL,
   `date` date NOT NULL,
   `trackName` varchar(255) NOT NULL,
-  `fastestLap` time NOT NULL,
+  `fastestLap` varchar(255) NOT NULL,
   `startPosition` tinyint NOT NULL,
   `finishPosition` tinyint NOT NULL,
   `aiDifficulty` tinyint NOT NULL,

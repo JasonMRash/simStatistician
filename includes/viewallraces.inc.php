@@ -1,6 +1,6 @@
 <?php
   $id = (int)$_SESSION['userId'];
-  $sql = 'SELECT Races.idRaces, Games.nameGames as game, Races.date, Setups.nameSetups as setupName FROM Races INNER JOIN Setups ON Setups.idSetups = Races.idSetups INNER JOIN Games ON Games.idGames = Races.idGames WHERE Races.idUsers = ?';
+  $sql = 'SELECT Races.idRaces, Races.trackName, Games.nameGames as game, Races.date, Setups.nameSetups as setupName FROM Races INNER JOIN Setups ON Setups.idSetups = Races.idSetups INNER JOIN Games ON Games.idGames = Races.idGames WHERE Races.idUsers = ?';
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)) {
     die(mysqli_error($conn));
@@ -17,7 +17,7 @@
     <td>'.$row['date'].'</td>
     <td>'.$row['trackName'].'</td>
     <td>'.$row['setupName'].'</td>
-    <td><a class="btn btn-sm btn-light" href="viewsetup.php?id='.$row['idRaces'].'">View</a></td>
-    <td><a class="btn btn-sm btn-warning" href="includes/deletesetup.inc.php?id='.$row['idRaces'].'">Delete</a></td>
+    <td><a class="btn btn-sm btn-light" href="viewraces.php?id='.$row['idRaces'].'">View</a></td>
+    <td><a class="btn btn-sm btn-warning" href="includes/deleteraces.inc.php?id='.$row['idRaces'].'">Delete</a></td>
     </tr>';
    }
