@@ -34,7 +34,7 @@
             
             echo '<div class="row justify-content-center">
             <div class="col-auto">
-              <table class="table table-bordered table-striped table-dark">
+              <table class="table table-sm table-bordered table-striped table-dark">
                 <thead>
                   <th>Games</th>
                   <th>Delete</th>

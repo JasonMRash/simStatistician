@@ -11,12 +11,14 @@
 }
 
 .bg-custom {
+  margin: 0;
   background-color:#252523;
 }
 
 .wrapper-main {
   min-height: 100vh;
   background-color: silver;
+  z-index:2;
 }
 
 .header-text {
@@ -28,4 +30,14 @@
 
 .footer-text {
   color: white;
+}
+
+.table-section {
+  background-color: red;
+  padding-top: 10px;
+}
+
+html, body, footer {
+  margin:0;
+  padding:0;
 }

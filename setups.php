@@ -2,8 +2,8 @@
   require "header.php";
 ?>
 
-  <main>
-    <div class="wrapper-main">
+  <main class="wrapper-main">
+    <div>
       <section class="container">
         <?php
           // check if user is logged in
@@ -35,10 +35,10 @@
             
             echo '<div class="row justify-content-center">
             <div class="col-auto">
-              <table class="table table-striped table-dark">
+              <table class="table table-sm table-striped table-dark">
                 <thead>
-                  <th>Setup Name</th>
-                  <th>Game Name</th>
+                  <th>Setup</th>
+                  <th>Game</th>
                   <th>View</th>
                   <th>Delete</th>
                 </thead>
@@ -127,7 +127,6 @@
               <div class="text-center">
                 <button class="btn btn-dark" type="submit" name="setups-submit">Add Setup</button>
               </div>
-            </div>
             </form>
             </section>';
           }

@@ -2,8 +2,8 @@
   require "header.php";
 ?>
 
-  <main>
-    <div class="wrapper-main">
+  <main class="wrapper-main">
+    <div>
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
@@ -32,14 +32,13 @@
             }
             require 'includes/dbh.inc.php';
             
-            echo '<div class="row justify-content-center">
+            echo '<div class="row justify-content-center ">
             <div class="col-auto">
-              <table class="table table-striped table-dark">
+              <table class="table table-sm table-striped table-dark">
                 <thead>
                   <th>Game</th>
                   <th>Date</th>
                   <th>Track</th>
-                  <th>Setup</th>
                   <th>View</th>
                   <th>Delete</th>
                 </thead>
@@ -48,8 +47,8 @@
             require 'includes/viewallraces.inc.php';
 
             echo '</tbody>
-                </table>
-              </div>
+              </table>
+            </div>
             </div>';
             // add race form
             echo '<form class="form-setups" action="includes/addrace.inc.php" method="post">
