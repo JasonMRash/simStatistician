@@ -25,67 +25,40 @@
               $result = mysqli_stmt_get_result($stmt);
               if ($row = mysqli_fetch_assoc($result)) {
                 echo '<p class="text-center">Setup Name: '.$row['nameSetups'].'</p>
-                <div class="row justify-content-center">
+                <div class="row">
                 <div class="col-lg">
-                  <div class="text-center">
-                    <strong class="justify-content-center">Aerodynamics</strong>
-                  </div>
-                  <div>
-                    <p>Front Wing: '.$row['frontWing'].'</br>
-                    Rear Wing: '.$row['rearWing'].'</p>
-                  </div>
-                  <div class="text-center">
-                    <strong class="justify-content-center">Transmission</strong>
-                  </div>
-                <div>
+                  <strong>Aerodynamics</strong>
+                  <p>Front Wing: '.$row['frontWing'].'</br>
+                  Rear Wing: '.$row['rearWing'].'</p>
+                  <strong>Transmission</strong>
                   <p>On Throttle Differential: '.$row['onThrottleDiff'].'%</br>
                   Off Throttle Differential: '.$row['offThrottleDiff'].'%</p>
-                </div>
-                <div class="text-center">
-                  <strong class="justify-content-center">Suspension Geometry</strong>
-                </div>
-                <div>
+                  <strong>Suspension Geometry</strong>
                   <p>Front Camber: '.$row['frontCamber'].'&#176<br>
                   Rear Camber: '.$row['rearCamber'].'&#176<br>
                   Front Toe: '.$row['frontToe'].'&#176<br>
                   Rear Toe: '.$row['rearToe'].'&#176</p>
                 </div>
-                </div>
-              <div class="col-lg">
-                
-                <div class="text-center">
-                  <strong class="justify-content-center">Suspension</strong>
-                </div>
-                <div>
+                <div class="col-lg">
+                  <strong>Suspension</strong>
                   <p>Front Suspension: '.$row['frontSuspension'].'<br>
                   Rear Suspension: '.$row['rearSuspension'].'<br>
                   Front Anti Roll Bar: '.$row['frontAntiRoll'].'<br>
                   Rear Anti Roll Bar: '.$row['rearAntiRoll'].'<br>
                   Front Ride Height: '.$row['frontRideHeight'].'<br>
                   Rear Ride Height: '.$row['rearRideHeight'].'</p>
-                </div>
-              </div>
-              <div class="col-lg">
-                <div class="text-center">
                   <strong class="justify-content-center">Brakes</strong>
-                </div>
-                <div class="">
                   <p>Brake Pressure: '.$row['brakePressure'].'&#176<br>
-                  <input class="form-control form-control-sm" type="number" min="50" max="70" title="Front Brake Bias" name="frontBrakeBias" placeholder="Front Brake Bias (70-50)">
+                  Front Brake Bias: '.$row['frontBrakeBias'].'&#176</p>
                 </div>
-                <div class="text-center">
-                  <strong class="justify-content-center">Tyres</strong>
+                <div class="col-lg">
+                  <strong>Tyres</strong>
+                  <p>Front Right Tyre Pressure: '.$row['frontRightPressure'].' psi<br>
+                  Front Left Tyre Pressure: '.$row['frontLeftPressure'].' psi<br>
+                  Rear Right Tyre Pressure: '.$row['rearRightPressure'].' psi<br>
+                  Rear Left Tyre Pressure: '.$row['rearLeftPressure'].' psi</p>
                 </div>
-                <div class="">
-                  <input class="form-control form-control-sm" type="number" min="21.0" max="25.0" step="0.1" name="frontRightPressure" placeholder="Front Right Tyre Pressure (21.0 - 25.0)">
-                  <input class="form-control form-control-sm" type="number" min="21.0" max="25.0" step="0.1" name="frontLeftPressure" placeholder="Front Left Tyre Pressure (21.0 - 25.0)">
-                  <input class="form-control form-control-sm" type="number" min="19.5" max="23.5" step="0.1" name="rearRightPressure" placeholder="Rear Right Tyre Pressure (19.5 - 23.5)">
-                  <input class="form-control form-control-sm" type="number" min="19.5" max="23.5" step="0.1" name="rearLeftPressure" placeholder="Rear Left Tyre Pressure (19.5 - 23.5)">
-                </div>
-              </div>
-              </div>
-                <td><a class="btn btn-sm btn-danger" href="includes/deletegame.inc.php?id='.$row['idGames'].'">Delete</a></td>
-                </tr>';
+                </div>';
             }
             }
           }

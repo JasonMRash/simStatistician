@@ -74,7 +74,7 @@
                     <strong>Race Date</strong>
                   </div>
                   <div>
-                    <input class="form-control form-control-sm" type="date" title="Race Date" name="date">
+                    <input class="form-control form-control-sm" type="date" title="Race Date" name="raceDate">
                   </div>
                   <div class="text-center">
                     <strong>Track Name</strong>

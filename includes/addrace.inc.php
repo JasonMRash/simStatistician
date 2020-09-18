@@ -5,9 +5,9 @@
 
     $gameId = (int)$_POST['gameId'];
     $userId = (int)$_SESSION['userId'];
-    $setupID = (int)$_POST['setupId'];
-    $inputDate = $_POST['date'];
-    $date=date("Y-m-d H:i:s",strtotime($input_date));
+    $setupId = (int)$_POST['setupId'];
+    $inputDate = $_POST['raceDate'];
+    $date=date("Y-m-d",strtotime($inputDate));
     $trackName = $_POST['trackName'];
     $fastestLap = $_POST['fastestLap'];
     $startPosition = (int)$_POST['startPosition'];
@@ -15,7 +15,7 @@
     $aiDifficulty = (int)$_POST['aiDifficulty'];
     $controllerType = $_POST['controllerType'];
 
-    if (empty($userId) || empty($gameId) || empty($setupID) || empty($inputDate) || empty($trackName) || empty($fastestLap) || empty($startPosition) 
+    if (empty($userId) || empty($gameId) || empty($setupId) || empty($inputDate) || empty($trackName) || empty($fastestLap) || empty($startPosition) 
       || empty($finishPosition) || empty($aiDifficulty) || empty($controllerType)) {
       header("Location: ../races.php?error=emptyfields");
       exit();

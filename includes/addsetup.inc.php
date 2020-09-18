@@ -36,7 +36,7 @@
     }
     else {
 
-      $sql = "SELECT nameSetups FROM Setups WHERE nameSetups=? & idUsers=?";
+      $sql = "SELECT nameSetups FROM Setups WHERE nameSetups=? AND idUsers=?";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../setups.php?error=sqlerror".mysqli_error($conn));
@@ -47,8 +47,9 @@
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
+        echo ''.$resultCheck;
         if ($resultCheck > 0) {
-          header("Location: ../setups.php?error=alreadyexists");
+          // header("Location: ../setups.php?error=alreadyexists");
           exit();
         }
         else {
