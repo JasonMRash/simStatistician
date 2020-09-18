@@ -2,8 +2,8 @@
   require "header.php";
 ?>
 
-  <main class="wrapper-main">
-    <div>
+  <main>
+    <div class="wrapper-main">
       <section class="container">
         <?php
           // check if user is logged in
@@ -134,6 +134,8 @@
             echo '<p">Log in to view your profile.</p>';
           }
         ?>
+    </div>
+    <div class="push">
     </div>
   </main>
 

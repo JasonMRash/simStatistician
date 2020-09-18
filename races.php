@@ -2,8 +2,8 @@
   require "header.php";
 ?>
 
-  <main class="wrapper-main">
-    <div>
+  <main>
+    <div class="wrapper-main">
       <section class="container">
         <?php
           if (isset($_SESSION['userId'])) {
@@ -129,6 +129,8 @@
             echo '<p">Log in to view your profile.</p>';
           }
         ?>
+    </div>
+    <div class="push">
     </div>
   </main>
 
