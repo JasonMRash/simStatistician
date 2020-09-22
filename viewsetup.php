@@ -16,7 +16,7 @@
               $sql = "SELECT * FROM Setups WHERE idSetups = ?";
               $stmt = mysqli_stmt_init($conn);
               if (!mysqli_stmt_prepare($stmt, $sql)) {
-                //header("Location: viewsetup.php?error=sqlerror");
+                header("Location: viewsetup.php?error=sqlerror");
                 exit();
               }
   
