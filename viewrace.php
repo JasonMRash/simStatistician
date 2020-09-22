@@ -14,7 +14,7 @@
               require 'includes/dbh.inc.php';
               $raceId = (int)$_GET['id'];
               $sql = "SELECT Games.nameGames as game, Setups.nameSetups as setup, Races.date, Races.trackName, Races.fastestLap,
-              Races.startPosition, Races.finishPosition, Races.aiDifficulty, Races.controllerType INNER JOIN Games ON Games.idGames=Races.idRaces INNER JOIN Setups ON Setups.idSetups=Races.idSetups FROM Races WHERE idRaces = ?";
+              Races.startPosition, Races.finishPosition, Races.aiDifficulty, Races.controllerType INNER JOIN Games ON Games.idGames=Races.idGames INNER JOIN Setups ON Setups.idSetups=Races.idSetups FROM Races WHERE idRaces = ?";
               $stmt = mysqli_stmt_init($conn);
               if (!mysqli_stmt_prepare($stmt, $sql)) {
                 //header("Location: viewsetup.php?error=sqlerror");
