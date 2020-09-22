@@ -27,7 +27,7 @@
               echo '<p class="error">Username is alread taken!</p>';
             }
             else if ($_GET['error'] == "sqlerror") {
-              echo '<p class="error">SQL database Error!</p>'.mysqli_error($conn);
+              echo '<p class="error">SQL database Error!'.mysqli_error($conn).'</p>;
             }
           }
         ?>
