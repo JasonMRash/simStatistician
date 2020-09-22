@@ -26,6 +26,9 @@
             else if ($_GET['error'] == "usertaken") {
               echo '<p class="error">Username is alread taken!</p>';
             }
+            else if ($_GET['error'] == "sqlerror") {
+              echo '<p class="error">SQL database Error!</p>'.mysqli_error($conn);
+            }
           }
         ?>
         <form class="form-signup" action="includes/signup.inc.php" method="post">
