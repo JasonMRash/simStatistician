@@ -51,7 +51,7 @@
               </form>';
             }
             else {
-              echo '<form action="includes/login.inc.php" method="post">
+              echo '<form action="login.inc.php" method="post">
               <input type="text" name="mailuid" placeholder="Username/Email...">
               <input type="password" name="pwd" placeholder="Password...">
               <button class ="btn btn-sm btn-outline-light" type="submit" name="login-submit">Login</button>
