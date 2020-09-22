@@ -13,7 +13,7 @@
 
 DROP TABLE IF EXISTS `Users`;
 CREATE TABLE `Users` (
-  `idUsers` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `idUsers` int(11) NOT NULL AUTO_INCREMENT,
   `uidUsers` varchar(255) NOT NULL,
   `emailUsers` varchar(255) NOT NULL,
   `pwdUsers` varchar(255) NOT NULL,

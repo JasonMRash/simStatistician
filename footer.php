@@ -1,5 +1,5 @@
-<footer class="bg-custom">
-<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+<footer class="bg-main">
+<nav class="navbar navbar-expand-lg navbar-dark bg-main">
   <ul class="navbar-nav mx-md-auto">
     <div>
     <li class="footer-text">Created by Jason Rash</li>

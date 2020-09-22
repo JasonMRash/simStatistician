@@ -15,8 +15,8 @@
     echo '<tr>
     <td>'.$row['nameSetups'].'</td>
     <td>'.$row['game'].'</td>
-    <td><a class="btn btn-sm btn-light" href="viewsetup.php?id='.$row['idSetups'].'">View</a></td>
-    <td><a class="btn btn-sm btn-warning" href="includes/deletesetup.inc.php?id='.$row['idSetups'].'">Delete</a></td>
+    <td><a class="btn btn-sm btn-success" href="viewsetup.php?id='.$row['idSetups'].'">View</a></td>
+    <td><a class="btn btn-sm btn-danger" href="includes/deletesetup.inc.php?id='.$row['idSetups'].'">Delete</a></td>
     </tr>';
    }
    

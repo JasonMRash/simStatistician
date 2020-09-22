@@ -33,21 +33,25 @@
             require 'includes/dbh.inc.php';
             
             echo '<div class="row justify-content-center ">
-            <div class="col-auto">
-              <table class="table table-sm table-striped table-dark">
-                <thead>
-                  <th>Game</th>
-                  <th>Date</th>
-                  <th>Track</th>
-                  <th>View</th>
-                  <th>Delete</th>
-                </thead>
-                <tbody>';
+            <div class="col-auto custom-column">
+              <div class="info-box bg-dark">
+                <div class="table-size overflow-auto">
+                  <table class="table table-sm table-striped table-dark">
+                    <thead>
+                      <th>Game</th>
+                      <th>Date</th>
+                      <th>Track</th>
+                      <th>View</th>
+                      <th>Delete</th>
+                    </thead>
+                    <tbody>';
 
             require 'includes/viewallraces.inc.php';
 
-            echo '</tbody>
-              </table>
+            echo '  </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             </div>';
             // add race form

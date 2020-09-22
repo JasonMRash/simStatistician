@@ -10,10 +10,6 @@
   font-size: large;
 }
 
-.bg-custom {
-  background-color:#252523;
-}
-
 .wrapper-main {
   min-height: 100%;
   margin-bottom: -50px;
@@ -28,6 +24,8 @@
   font-size: 5vw;
 }
 
+
+
 .footer-text {
   color: white;
 }
@@ -39,4 +37,26 @@
 footer, .push {
   width: 100%;
   height: 50px;
+}
+
+.info-box {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.table-size {
+  max-height: 250px;
+}
+
+.custom-column {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 2vw;
+  border-radius: 10px;
+  background-color: #b00002;
+}
+
+.bg-main {
+  background-color: #b00002;
 }

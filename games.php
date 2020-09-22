@@ -33,19 +33,23 @@
             require 'includes/dbh.inc.php';
             
             echo '<div class="row justify-content-center">
-            <div class="col-auto">
-              <table class="table table-sm table-bordered table-striped table-dark">
-                <thead>
-                  <th>Games</th>
-                  <th>Delete</th>
-                </thead>
-                <tbody>';
+            <div class="col-auto custom-column">
+              <div class="info-box bg-dark">
+                <div class="table-size overflow-auto">
+                  <table class="table table-sm table-bordered table-striped table-dark">
+                    <thead>
+                      <th>Games</th>
+                      <th>Delete</th>
+                    </thead>
+                    <tbody>';
 
             require 'includes/viewgames.inc.php';
 
-            echo '</tbody>
-                </table>
+            echo '  </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
             </div>';
 
             echo '<form class="form-games" action="includes/addgame.inc.php" method="post">

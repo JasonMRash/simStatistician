@@ -16,7 +16,7 @@
     <td>'.$row['game'].'</td>
     <td>'.$row['date'].'</td>
     <td>'.$row['trackName'].'</td>
-    <td><a class="btn btn-sm btn-light" href="viewrace.php?id='.$row['idRaces'].'">View</a></td>
-    <td><a class="btn btn-sm btn-warning" href="includes/deleterace.inc.php?id='.$row['idRaces'].'">Delete</a></td>
+    <td><a class="btn btn-sm btn-success" href="viewrace.php?id='.$row['idRaces'].'">View</a></td>
+    <td><a class="btn btn-sm btn-danger" href="includes/deleterace.inc.php?id='.$row['idRaces'].'">Delete</a></td>
     </tr>';
    }

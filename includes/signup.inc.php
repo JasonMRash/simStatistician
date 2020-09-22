@@ -58,7 +58,7 @@
             mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
-            header("Location: ../signup.php?signup=success");
+            header("Location: ../index.php?signup=success");
             exit();
           }
         }

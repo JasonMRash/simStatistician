@@ -34,21 +34,25 @@
             require 'includes/dbh.inc.php';
             
             echo '<div class="row justify-content-center">
-            <div class="col-auto">
-              <table class="table table-sm table-striped table-dark">
-                <thead>
-                  <th>Setup</th>
-                  <th>Game</th>
-                  <th>View</th>
-                  <th>Delete</th>
-                </thead>
-                <tbody>';
+            <div class="col-auto custom-column">
+              <div class="info-box bg-dark">
+                <div class="table-size overflow-auto">
+                  <table class="table table-sm table-striped table-dark">
+                    <thead>
+                      <th>Setup</th>
+                      <th>Game</th>
+                      <th>View</th>
+                      <th>Delete</th>
+                    </thead>
+                    <tbody>';
             // show all user setups
             require 'includes/viewallsetups.inc.php';
 
-            echo '</tbody>
-                </table>
+            echo '  </tbody>
+                  </table>
+                </div>
               </div>
+            </div>
             </div>';
             // add setup form
             echo '<form class="form-setups" action="includes/addsetup.inc.php" method="post">

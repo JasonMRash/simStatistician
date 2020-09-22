@@ -27,11 +27,6 @@
               echo '<p class="error">Username is alread taken!</p>';
             }
           }
-          if (isset($_GET['signup'])) {
-            if ($_GET['signup'] == "success") {
-              echo '<p class="success">Signup sucessful!</p>';
-            }
-          }
         ?>
         <form class="form-signup" action="includes/signup.inc.php" method="post">
           <div class="text-center ">

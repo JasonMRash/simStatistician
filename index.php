@@ -19,11 +19,15 @@
             else if ($_GET['error'] == "sqlerror") {
               echo '<p class="error">SQL database Error!</p>';
             }
-            
           }
           else if (isset($_GET['login'])) {
             if ($_GET['login'] == "success") {
-              echo '<p class="success">Login sucessful!</p>';
+              echo '<p class="success">Login successful!</p>';
+            }
+          }
+          else if (isset($_GET['signup'])) {
+            if ($_GET['signup'] == "success") {
+              echo '<p class="success">Signup successful</p>';
             }
           }
         ?>
