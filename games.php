@@ -4,7 +4,8 @@
 
   <main>
     <div class="wrapper-main">
-      <section class="container">
+      <section class="container section-padding">
+        <div class="section-wrapper">
         <?php
           if (isset($_SESSION['userId'])) {
             echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Games</h1></div>';
@@ -53,8 +54,8 @@
             </div>';
 
             echo '<form class="form-games" action="includes/addgame.inc.php" method="post">
-              <div class="-sm text-center">
-                <input class="form-control" type="text" name="gameName" placeholder="Game Name">
+              <div class="form-group text-center">
+                <input class="form-control form-control-sm" type="text" name="gameName" placeholder="Game Name">
               </div>
               <div class=" text-center">
                 <button class="btn btn-dark" type="submit" name="games-submit">Add Game</button>
@@ -66,8 +67,7 @@
             echo '<p">Log in to view your profile.</p>';
           }
         ?>
-    </div>
-    <div class="push">
+        </div>
     </div>
   </main>
   

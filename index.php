@@ -4,8 +4,9 @@
 
   <main>
     <div class="wrapper-main">
-      <section class="container">
-      <?php
+      <section class="container section-padding">
+        <div class="section-wrapper">
+        <?php
           if (isset($_GET['error'])) {
             if($_GET['error'] == "emptyfields") {
               echo '<p class="error">Fill in all fields!</p>';
@@ -33,15 +34,17 @@
         ?>
         <?php
           if (isset($_SESSION['userId'])) {
-            echo '<div class="text-center"><strong class="login-status header-text">Welcome '.$_SESSION['userUid'].'!</strong></div>';
+            echo '<div class="text-center"><strong class="login-status header-text">Welcome '.$_SESSION['userUid'].'!</strong></div>
+            <p class="login-status text-center">You are now logged in and can view your racing data!';
           }
           else {
-            echo '<p class="login-status">You are logged out!</p>';
+            echo '<h1 class="text-center header-text">Sim Statistician</h1>
+            <p class="login-status text-center">You are logged out!</p>
+            <p class="login-status text-center">Signup and Login or use the Username: test and Password: test to view sample usage.';
           }
         ?>
+        </div>
       </section>
-    </div>
-    <div class="push">
     </div>
   </main>
 

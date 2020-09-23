@@ -63,12 +63,10 @@
             }
           }
           else {
-            echo '<p class="login-status">You are logged out!</p>';
+            echo '<p class="login-status">Login to view Setup details!</p>';
           }
         ?>
       </section>
-    </div>
-    <div class="push">
     </div>
   </main>
 

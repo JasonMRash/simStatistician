@@ -4,7 +4,8 @@
 
   <main>
     <div class="wrapper-main">
-      <section class="container">
+      <section class="container section-padding">
+        <div class="section-wrapper">
         <?php
           if (isset($_SESSION['userId'])) {
             echo '<div class="text-center"><h1 class="header-text">'.$_SESSION['userUid'].'\'s Profile</h1></div>';
@@ -55,9 +56,8 @@
             echo '<p class="profile-text text-center">Log in to view your profile.</p>';
           }
         ?>
+        </div>
       </section>
-    </div>
-    <div class="push">
     </div>
   </main>
 
