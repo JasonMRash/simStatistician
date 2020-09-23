@@ -24,7 +24,9 @@
   font-size: 5vw;
 }
 
-
+.profile-text {
+  font-size: 2rem;
+}
 
 .footer-text {
   color: white;
