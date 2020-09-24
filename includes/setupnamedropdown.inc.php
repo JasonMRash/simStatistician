@@ -1,5 +1,9 @@
+<div class="text-center">
+  <strong>Setup Name</strong>
+</div>
 <select class="form-control form-control-sm" name="setupId" id="setupId">
-  <option disabled selected value="">Select Setup</option selected>
+<option disabled selected value="">Setup Name</option selected>
+  <option value="">No Setup/Default</option>
 <?php
   $userId =$_SESSION['userId'];
   $sql = "SELECT nameSetups, idSetups FROM Setups WHERE idUsers=?";

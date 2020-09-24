@@ -36,12 +36,13 @@
             echo '<div class="row justify-content-center ">
             <div class="col-auto custom-column">
               <div class="info-box bg-dark">
-                <div class="table-size overflow-auto">
+                <div class="table-responsive-md">
                   <table class="table table-sm table-striped table-dark">
                     <thead>
                       <th>Game</th>
                       <th>Date</th>
                       <th>Track</th>
+                      <th>Fastest Lap</th>
                       <th>View</th>
                       <th>Delete</th>
                     </thead>

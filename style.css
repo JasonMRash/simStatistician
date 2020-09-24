@@ -1,3 +1,11 @@
+@font-face {
+  font-family: dodgerItalic;
+  src: url(DodgerCondensedItalic-4Dzl.otf);
+}
+
+p, strong, div, input {
+  font-family: 'Roboto', sans-serif;
+}
 .error {
   color: red;
 }
@@ -22,8 +30,12 @@
 
 .header-text {
   font-size: 5vw;
+  font-family: dodgerItalic !important;
 }
 
+.nav-title {
+  font-family: dodgerItalic !important;
+}
 .about-text {
   font-size: 1.5rem;
   padding-left: 1vw;

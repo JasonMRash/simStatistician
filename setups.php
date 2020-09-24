@@ -35,10 +35,10 @@
             require 'includes/dbh.inc.php';
             
             echo '<div class="row justify-content-center">
-            <div class="col-auto custom-column">
+            <div class="custom-column">
               <div class="info-box bg-dark">
-                <div class="table-size overflow-auto">
-                  <table class="table table-sm table-striped table-dark">
+                <div class="table-responsive-md">
+                  <table class="table table-striped table-dark">
                     <thead>
                       <th>Setup</th>
                       <th>Game</th>
@@ -58,6 +58,9 @@
             // add setup form
             echo '<form class="form-setups" action="includes/addsetup.inc.php" method="post">
             <div class="container">
+              <div class="text-center">
+                <strong>Setup Name</strong>
+              </div>
               <div class="row justify-content-center">
                 <div class="form-group">
                   <input class="form-control form-control-sm" type="text" title="Setup Name" name="setupName" placeholder="Setup Name">

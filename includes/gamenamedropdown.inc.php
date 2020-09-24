@@ -1,3 +1,6 @@
+<div class="text-center">
+  <strong>Game Name</strong>
+</div>
 <select class="form-control form-control-sm" name="gameId" id="gameId">
   <option disabled selected value="">Select Game</option selected>
 <?php

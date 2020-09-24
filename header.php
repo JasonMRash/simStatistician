@@ -13,11 +13,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="includes/sliderValue.js"></script>
 <body class="wrapper-site">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-main">
-      <a class="navbar-brand" href="index.php">Sim Statistician</a>
+      <a class="navbar-brand nav-title" href="index.php">Sim Statistician</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>

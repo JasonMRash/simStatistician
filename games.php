@@ -36,7 +36,7 @@
             echo '<div class="row justify-content-center">
             <div class="col-auto custom-column">
               <div class="info-box bg-dark">
-                <div class="table-size overflow-auto">
+                <div class="table-responsive-md">
                   <table class="table table-bordered table-striped table-dark">
                     <thead>
                       <th>Games</th>
@@ -54,12 +54,16 @@
             </div>';
 
             echo '<form class="form-games" action="includes/addgame.inc.php" method="post">
+            <div class="container">
+            <div class="row justify-content-center">
               <div class="form-group text-center">
                 <input class="form-control form-control-sm" type="text" name="gameName" placeholder="Game Name">
               </div>
+            </div>
               <div class=" text-center">
                 <button class="btn btn-dark" type="submit" name="games-submit">Add Game</button>
               </div>
+            </div>
             </form>
             </section>';
           }

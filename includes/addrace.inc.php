@@ -6,6 +6,10 @@
     $gameId = (int)$_POST['gameId'];
     $userId = (int)$_SESSION['userId'];
     $setupId = (int)$_POST['setupId'];
+    // setup is not required to save race
+    if ($setupId = "") {
+      $setupId = NULL;
+    }
     $inputDate = $_POST['raceDate'];
     $date=date("Y-m-d",strtotime($inputDate));
     $trackName = $_POST['trackName'];
