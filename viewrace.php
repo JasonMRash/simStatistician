@@ -3,8 +3,8 @@
 ?>
 
   <main>
-    <div class="wrapper-main">
-      <section class="container">
+    <div class="wrapper-main section-padding">
+      <section class="container section-wrapper">
         <div class="text-center">
           <h1>View Race</h1>
         </div>
@@ -14,7 +14,7 @@
               require 'includes/dbh.inc.php';
               $raceId = (int)$_GET['id'];
               $sql = "SELECT Games.nameGames as game, Setups.nameSetups as setup, Races.date, Races.trackName, Races.fastestLap,
-              Races.startPosition, Races.finishPosition, Races.aiDifficulty, Races.controllerType FROM Races INNER JOIN Games ON Games.idGames=Races.idGames INNER JOIN Setups ON Setups.idSetups=Races.idSetups WHERE idRaces = ?";
+              Races.startPosition, Races.finishPosition, Races.aiDifficulty, Races.controllerType FROM Races INNER JOIN Games ON Games.idGames=Races.idGames LEFT OUTER JOIN Setups ON Setups.idSetups=Races.idSetups WHERE idRaces = ?";
               $stmt = mysqli_stmt_init($conn);
               if (!mysqli_stmt_prepare($stmt, $sql)) {
                 //header("Location: viewsetup.php?error=sqlerror");
@@ -44,7 +44,7 @@
                   </div>
                   <div class="col-lg">
                     <div>
-                      <p>AI Difficulty: '.$row['aiDifficult'].'<br>
+                      <p>AI Difficulty: '.$row['aiDifficulty'].'<br>
                       Controller Type: '.$row['controllerType'].'</p>
                     </div>
                   </div>

@@ -79,7 +79,7 @@ CREATE TABLE `Races` (
   `idRaces` int(11) NOT NULL AUTO_INCREMENT,
   `idUsers` int(11) NOT NULL,
   `idGames` int(11) NOT NULL,
-  `idSetups` int(11), -- Not required
+  `idSetups` int(11) DEFAULT NULL, -- Not required
   `date` date NOT NULL,
   `trackName` varchar(255) NOT NULL,
   `fastestLap` varchar(255) NOT NULL,

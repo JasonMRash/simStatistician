@@ -3,8 +3,8 @@
 ?>
 
   <main>
-    <div class="wrapper-main">
-      <section class="container">
+    <div class="wrapper-main section-padding">
+      <section class="container section-wrapper">
         <div class="text-center">
           <h1>View Setup</h1>
         </div>
