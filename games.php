@@ -37,7 +37,7 @@
             <div class="col-auto custom-column">
               <div class="info-box bg-dark">
                 <div class="table-size overflow-auto">
-                  <table class="table table-sm table-bordered table-striped table-dark">
+                  <table class="table table-bordered table-striped table-dark">
                     <thead>
                       <th>Games</th>
                       <th>Delete</th>

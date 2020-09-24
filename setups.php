@@ -4,7 +4,8 @@
 
   <main>
     <div class="wrapper-main">
-      <section class="container">
+      <section class="container section-padding">
+        <div class="section-wrapper">
         <?php
           // check if user is logged in
           if (isset($_SESSION['userId'])) {
@@ -104,7 +105,6 @@
                 </div>
                 </div>
               <div class="col-lg">
-                
                 <div class="text-center">
                   <strong class="justify-content-center">Suspension</strong>
                 </div>
@@ -151,13 +151,14 @@
               <div class="text-center">
                 <button class="btn btn-dark" type="submit" name="setups-submit">Add Setup</button>
               </div>
-            </form>
-            </section>';
+            </form>';
           }
           else {
             echo '<p">Log in to view your profile.</p>';
           }
         ?>
+        </div>
+      </section>
     </div>
   </main>
 
