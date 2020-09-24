@@ -4,7 +4,7 @@
 <footer class="bg-main fixed-bottom">
 <nav class="navbar navbar-dark bg-main">
   <div class="text-center"> 
-    <p class="footer-text">Created by Jason Rash</p>
+    <p class="nav-title footer-text">Created by Jason Rash</p>
   </div>
 </nav>
 </footer>
