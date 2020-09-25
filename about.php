@@ -15,7 +15,7 @@
             <p>Username: test</p>
             <p>Password: test</p>
           </div>
-          <p class="profile-text text-center">https://github.com/JasonMRash/simStatistician</p>
+          <p class="about-text text-center">https://github.com/JasonMRash/simStatistician</p>
         </div>
       </section>
     </div>
