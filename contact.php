@@ -8,7 +8,7 @@
         <div class ="text-center section-wrapper">
           <h1 class="header-text">Contact Me</h1>
           <p class="contact-text">jasonmichaelrash@gmail.com</p>
-          <p class="about-text">https://github.com/JasonMRash</p>
+          <p class="contact-text">https://github.com/JasonMRash</p>
         </div>
       </section>
     </div>
