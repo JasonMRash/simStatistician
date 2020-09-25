@@ -75,7 +75,7 @@ p, strong, div, input {
 }
 
 .section-wrapper {
-  background-color: rgba(245, 243, 243, 0.8);
+  background-color: rgba(245, 243, 243, 0.85);
   border-radius: 10px;
   padding: 1vw;
   margin: 1vw;
