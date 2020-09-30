@@ -48,8 +48,8 @@
                   Front Ride Height: '.$row['frontRideHeight'].'<br>
                   Rear Ride Height: '.$row['rearRideHeight'].'</p>
                   <strong class="justify-content-center">Brakes</strong>
-                  <p>Brake Pressure: '.$row['brakePressure'].'&#176<br>
-                  Front Brake Bias: '.$row['frontBrakeBias'].'&#176</p>
+                  <p>Brake Pressure: '.$row['brakePressure'].'%<br>
+                  Front Brake Bias: '.$row['frontBrakeBias'].'%</p>
                 </div>
                 <div class="col-lg">
                   <strong>Tyres</strong>
