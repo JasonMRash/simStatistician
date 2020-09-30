@@ -24,8 +24,8 @@
     $frontBrakeBias = (int)$_POST['frontBrakeBias'];
     $frontRightPressure = (double)$_POST['frontRightPressure'];
     $frontLeftPressure = (double)$_POST['frontLeftPressure'];
-    $rearRightPressure = (double)$_POST['frontRightPressure'];
-    $rearLeftPressure = (double)$_POST['frontLeftPressure'];
+    $rearRightPressure = (double)$_POST['rearRightPressure'];
+    $rearLeftPressure = (double)$_POST['rearLeftPressure'];
 
     if (empty($setupName) || empty($gameId) || empty($frontWing) || empty($rearWing) || empty($onThrottleDiff) || empty($offThrottleDiff)
         || empty($frontCamber) || empty($rearCamber) || empty($frontToe) || empty($rearToe) || empty($frontSuspension) || empty($rearSuspension)
